@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>老张沙特物流 | 中东专线更稳一点</title>
+<meta name="description" content="老张沙特物流，专注沙特、阿联酋中东专线，提供双清、转运、跨境物流咨询服务。">
+<script>
+/* 首屏前置主题判定，避免闪烁：按访客设备本地时间 06:00-18:00 日间，其余夜间 */
+(function () {
+  try {
+    var saved = localStorage.getItem('lz_saudi_theme');
+    var h = new Date().getHours();
+    var t = saved || ((h >= 6 && h < 18) ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+})();
+</script>
+<style>
+/* ============ 主题变量 ============ */
+:root{
+  --bg:#F4F5F1;
+  --card:#FFFFFF;
+  --card-alt:#FAFBF8;
+  --text:#17251D;
+  --muted:#6B7A70;
+  --brand:#12784A;
+  --brand-strong:#0C5C38;
+  --brand-soft:#E7F2EC;
+  --on-brand:#FFFFFF;
+  --border:#E2E7E0;
+  --input-bg:#F8F9F6;
+  --tag-bg:#F1F4EF;
+  --nav-bg:rgba(244,245,241,.88);
+  --bar-bg:rgba(244,245,241,.94);
+  --shadow:0 2px 10px rgba(20,45,32,.05);
+  --brand-shadow:0 8px 20px rgba(18,120,74,.25);
+  --danger:#C0392B;
+  --sel-arrow:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%236B7A70' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  color-scheme: light;
+}
+
+html[data-theme="dark"]{
+  --bg:#14110E;
+  --card:#211C18;
+  --card-alt:#1B1714;
+  --text:#F1EADC;
+  --muted:#A2978A;
+  --brand:#D9BA79;
+  --brand-strong:#EBD3A2;
+  --brand-soft:rgba(217,186,121,.12);
+  --on-brand:#14110E;
+  --border:#352F28;
+  --input-bg:#1A1613;
+  --tag-bg:#2A241E;
+  --nav-bg:rgba(20,17,14,.88);
+  --bar-bg:rgba(20,17,14,.95);
+  --shadow:0 2px 12px rgba(0,0,0,.35);
+  --brand-shadow:0 8px 20px rgba(217,186,121,.18);
+  --danger:#E08A7E;
+  --sel-arrow:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%23A2978A' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  color-scheme: dark;
+}
+
+/* ============ 基础 ============ */
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  font-size:15px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:96px;
+  transition:background-color .25s ease,color .25s ease;
+}
+h1,h2,h3,h4,p{margin:0}
+img{max-width:100%;display:block}
+button{font-family:inherit}
+
+.wrap{max-width:480px;margin:0 auto;padding:0 16px}
+
+/* ============ 导航 ============ */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{display:flex;align-items:center;gap:9px;min-width:0}
+.brand-name{font-size:15.5px;font-weight:700;letter-spacing:.2px;white-space:nowrap}
+.logo{width:34px;height:34px;flex:0 0 auto;display:block}
+.theme-btn{
+  width:38px;height:38px;flex:0 0 auto;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:11px;border:1px solid var(--border);
+  background:var(--card);color:var(--text);
+  font-size:17px;line-height:1;cursor:pointer;
+  transition:transform .15s ease,background-color .2s ease;
+}
+.theme-btn:active{transform:scale(.93)}
+
+/* ============ 首屏 ============ */
+.hero{padding:26px 0 18px}
+.hero-logo{width:54px;height:54px;margin-bottom:14px}
+.hero-logo .logo{width:54px;height:54px}
+.hero h1{
+  font-size:24px;line-height:1.3;font-weight:800;
+  letter-spacing:.5px;margin-bottom:8px;
+}
+.slogan{
+  font-size:15px;font-weight:600;color:var(--brand);
+  margin-bottom:6px;letter-spacing:.2px;
+}
+.slogan-en{
+  font-size:11.5px;color:var(--muted);letter-spacing:.3px;
+  text-transform:uppercase;margin-bottom:14px;
+}
+.positioning{
+  font-size:13.5px;color:var(--muted);line-height:1.7;
+  padding:12px 14px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-left:3px solid var(--brand);
+  border-radius:10px;
+}
+
+/* ============ 信任条 ============ */
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.trust-item{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:12px 6px;
+  text-align:center;
+  box-shadow:var(--shadow);
+}
+.trust-item svg{width:19px;height:19px;margin:0 auto 6px;display:block;color:var(--brand)}
+.trust-item span{font-size:11.5px;line-height:1.35;display:block;color:var(--text);font-weight:600}
+
+/* ============ 区块标题 ============ */
+.sec-title{
+  display:flex;align-items:center;gap:8px;
+  font-size:17px;font-weight:800;
+  margin:30px 0 12px;
+  letter-spacing:.3px;
+}
+.sec-title::before{
+  content:"";width:4px;height:16px;border-radius:2px;
+  background:var(--brand);flex:0 0 auto;
+}
+.sec-sub{font-size:12.5px;color:var(--muted);margin:-4px 0 12px;padding-left:12px}
+
+/* ============ 服务列表 ============ */
+.svc{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:15px 16px;
+  margin-bottom:11px;
+  box-shadow:var(--shadow);
+}
+.svc-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.svc h3{font-size:15.5px;font-weight:700;letter-spacing:.2px}
+.svc .en{font-size:11px;color:var(--muted);letter-spacing:.2px;margin-top:3px}
+.badge{
+  flex:0 0 auto;
+  font-size:11px;font-weight:600;
+  color:var(--brand);
+  background:var(--brand-soft);
+  border:1px solid var(--brand-soft);
+  padding:3px 9px;border-radius:999px;
+  white-space:nowrap;
+}
+.svc p{font-size:13px;color:var(--muted);margin:10px 0 11px;line-height:1.65}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{
+  font-size:11px;color:var(--muted);
+  background:var(--tag-bg);
+  border:1px solid var(--border);
+  padding:2px 9px;border-radius:999px;
+}
+
+/* ============ 表单 ============ */
+.form-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:16px;
+  box-shadow:var(--shadow);
+}
+.field{margin-bottom:14px}
+.field:last-child{margin-bottom:0}
+.field > label{
+  display:block;font-size:13px;font-weight:600;
+  margin-bottom:6px;letter-spacing:.2px;
+}
+.req{color:var(--danger);font-weight:700}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="email"],
+select,
+textarea{
+  width:100%;
+  padding:11px 12px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background:var(--input-bg);
+  color:var(--text);
+  font-size:15px;
+  font-family:inherit;
+  line-height:1.4;
+  outline:none;
+  transition:border-color .15s ease,box-shadow .15s ease;
+}
+input::placeholder,textarea::placeholder{color:var(--muted);opacity:.65}
+input:focus,select:focus,textarea:focus{
+  border-color:var(--brand);
+  box-shadow:0 0 0 3px var(--brand-soft);
+}
+textarea{resize:vertical;min-height:78px}
+select{
+  -webkit-appearance:none;appearance:none;
+  background-image:var(--sel-arrow);
+  background-repeat:no-repeat;
+  background-position:right 12px center;
+  background-size:11px;
+  padding-right:34px;
+}
+select option{background:var(--card);color:var(--text)}
+input[type="number"]{-moz-appearance:textfield}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.mini{display:flex;flex-direction:column;gap:4px;min-width:0}
+.mini > span{font-size:11px;color:var(--muted)}
+.mini input{padding:9px 8px;font-size:14px;border-radius:9px;text-align:center}
+
+/* ============ 货物条目 ============ */
+.cargo{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:14px;
+  margin-bottom:12px;
+  box-shadow:var(--shadow);
+}
+.cargo-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-bottom:10px;margin-bottom:13px;
+  border-bottom:1px dashed var(--border);
+}
+.cargo-title{font-size:13.5px;font-weight:700;letter-spacing:.3px;color:var(--brand)}
+.cargo-title em{font-style:normal}
+.btn-del{
+  border:1px solid var(--border);
+  background:transparent;
+  color:var(--muted);
+  font-size:12px;
+  padding:4px 11px;border-radius:999px;
+  cursor:pointer;transition:color .15s ease,border-color .15s ease;
+}
+.btn-del:active{color:var(--danger);border-color:var(--danger)}
+
+/* 上传 */
+.file-input{
+  position:absolute;width:1px;height:1px;
+  opacity:0;overflow:hidden;pointer-events:none;
+}
+.upload{
+  position:relative;
+  border:1.5px dashed var(--border);
+  border-radius:12px;
+  background:var(--input-bg);
+  padding:12px;
+  text-align:center;
+}
+.upload.has-file{border-style:solid;border-color:var(--brand);text-align:left}
+.upload-label{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:13px;font-weight:600;color:var(--brand);
+  padding:6px 12px;border-radius:9px;cursor:pointer;
+}
+.upload-label .plus{font-size:15px;line-height:1}
+.thumbs{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+.thumbs img{
+  width:62px;height:62px;object-fit:cover;
+  border-radius:9px;border:1px solid var(--border);
+}
+
+/* 计算行 */
+.calc{
+  display:grid;grid-template-columns:1fr 1fr;gap:8px;
+  background:var(--brand-soft);
+  border-radius:10px;
+  padding:10px 12px;
+  margin-top:12px;
+  font-size:11.5px;color:var(--muted);
+}
+.calc b{color:var(--brand);font-size:14px;font-weight:800;margin:0 2px}
+
+/* 合计 */
+.totals{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:6px;
+  background:var(--card);
+  border:1px solid var(--brand);
+  border-radius:14px;
+  padding:14px 8px;
+  margin-top:12px;
+  text-align:center;
+  box-shadow:var(--shadow);
+}
+.totals .t-label{display:block;font-size:11px;color:var(--muted);margin-bottom:2px}
+.totals .t-val{font-size:17px;font-weight:800;color:var(--brand);line-height:1.2}
+.totals .t-unit{font-size:10.5px;color:var(--muted);margin-left:2px;font-weight:500}
+
+.btn-add{
+  width:100%;
+  padding:12px;
+  margin-top:2px;
+  border-radius:12px;
+  border:1.5px dashed var(--brand);
+  background:transparent;
+  color:var(--brand);
+  font-size:14px;font-weight:700;
+  cursor:pointer;
+  transition:background-color .15s ease;
+}
+.btn-add:active{background:var(--brand-soft)}
+
+/* ============ 联系信息 ============ */
+.contact{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:20px 18px;
+  text-align:center;
+  box-shadow:var(--shadow);
+  margin-bottom:26px;
+}
+.contact h3{font-size:16px;font-weight:800;letter-spacing:.4px;margin-bottom:4px}
+.contact .biz{font-size:12.5px;color:var(--muted);line-height:1.7;margin-bottom:14px}
+.contact-lines{display:flex;flex-direction:column;gap:8px;margin-bottom:16px;text-align:left}
+.contact-line{
+  display:flex;align-items:center;justify-content:space-between;
+  font-size:13px;
+  background:var(--card-alt);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:9px 12px;
+}
+.contact-line .k{color:var(--muted);font-size:12px}
+.contact-line .v{font-weight:700;color:var(--text);letter-spacing:.3px}
+.contact-line a{color:var(--brand);text-decoration:none;font-weight:700}
+.qr-box{display:inline-block}
+.qr-box img{
+  width:132px;height:132px;display:block;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background: #fff;
+  object-fit: cover;
+}
+.qr-cap{font-size:11.5px;color:var(--muted);margin-top:8px;letter-spacing:.3px}
+.foot{text-align:center;font-size:11px;color:var(--muted);padding-bottom:26px;line-height:1.8}
+
+/* ============ 底部固定栏 ============ */
+.bottom-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:var(--bar-bg);
+  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(14px);
+  border-top:1px solid var(--border);
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+}
+.bottom-inner{max-width:480px;margin:0 auto}
+.btn-primary{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:14px;
+  background:var(--brand);
+  color:var(--on-brand);
+  font-size:16px;
+  font-weight:800;
+  letter-spacing:.8px;
+  cursor:pointer;
+  box-shadow:var(--brand-shadow);
+  transition:transform .12s ease,opacity .15s ease;
+}
+.btn-primary:active{transform:scale(.985);opacity:.92}
+
+/* ============ 结果弹层 ============ */
+.modal{
+  position:fixed;inset:0;z-index:100;
+  display:none;
+  align-items:flex-end;justify-content:center;
+  background:rgba(0,0,0,.5);
+  -webkit-backdrop-filter:blur(2px);
+  backdrop-filter:blur(2px);
+}
+.modal.show{display:flex}
+.modal-card{
+  width:100%;max-width:480px;
+  max-height:86vh;overflow:auto;
+  background:var(--card);
+  border-radius:20px 20px 0 0;
+  padding:20px 18px calc(20px + env(safe-area-inset-bottom));
+  animation:slideUp .25s ease;
+}
+@keyframes slideUp{from{transform:translateY(24px);opacity:.4}to{transform:translateY(0);opacity:1}}
+.modal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.modal-head h3{font-size:16.5px;font-weight:800;letter-spacing:.3px}
+.modal-close{
+  width:32px;height:32px;border-radius:50%;
+  border:1px solid var(--border);background:transparent;
+  color:var(--muted);font-size:14px;line-height:1;cursor:pointer;
+}
+.modal-tip{font-size:12.5px;color:var(--muted);line-height:1.65;margin-bottom:12px}
+.summary{
+  white-space:pre-wrap;word-break:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:12px;line-height:1.75;
+  background:var(--card-alt);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:13px;
+  max-height:44vh;overflow:auto;
+  margin:0 0 14px;
+  color:var(--text);
+}
+</style>
+</head>
+<body>
+
+<!-- ================= 导航 ================= -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="11" fill="var(--brand)"/>
+        <path d="M12 15.6 L20 11.2 L28 15.6 L28 24.4 L20 28.8 L12 24.4 Z"
+              fill="none" stroke="var(--on-brand)" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M12 15.6 L20 20 L28 15.6"
+              fill="none" stroke="var(--on-brand)" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M20 20 L20 28.8"
+              fill="none" stroke="var(--on-brand)" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">老张沙特物流</span>
+    </div>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="切换到夜间模式">☾</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ================= 首屏 ================= -->
+  <section class="hero">
+    <div class="hero-logo">
+      <svg class="logo" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="11" fill="var(--brand)"/>
+        <path d="M12 15.6 L20 11.2 L28 15.6 L28 24.4 L20 28.8 L12 24.4 Z"
+              fill="none" stroke="var(--on-brand)" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M12 15.6 L20 20 L28 15.6"
+              fill="none" stroke="var(--on-brand)" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M20 20 L20 28.8"
+              fill="none" stroke="var(--on-brand)" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <h1>老张沙特物流</h1>
+    <p class="slogan">老张沙特物流，中东专线更稳一点</p>
+    <p class="slogan-en">Middle East Line, Smoother Logistics with Lao Zhang</p>
+    <p class="positioning">专注沙特、阿联酋中东专线，提供双清、转运、跨境物流咨询服务。</p>
+
+    <!-- 信任数据条 -->
+    <div class="trust">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        <span>中东专线咨询</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 11l3 3L22 4"/>
+          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+        </svg>
+        <span>货物信息清晰录入</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        <span>一对一商务跟进</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 服务列表 ================= -->
+  <h2 class="sec-title">服务项目</h2>
+
+  <article class="svc">
+    <div class="svc-head">
+      <div>
+        <h3>沙特专线</h3>
+        <div class="en">Saudi Arabia Line</div>
+      </div>
+      <span class="badge">咨询报价</span>
+    </div>
+    <p>承接中国至沙特方向货物运输咨询，协助客户整理发货信息。</p>
+    <div class="tags">
+      <span class="tag">沙特专线</span>
+      <span class="tag">双清咨询</span>
+      <span class="tag">稳定对接</span>
+    </div>
+  </article>
+
+  <article class="svc">
+    <div class="svc-head">
+      <div>
+        <h3>阿联酋专线</h3>
+        <div class="en">UAE Line</div>
+      </div>
+      <span class="badge">咨询报价</span>
+    </div>
+    <p>承接中国至阿联酋方向货物运输咨询，适合贸易商与电商卖家。</p>
+    <div class="tags">
+      <span class="tag">阿联酋专线</span>
+      <span class="tag">转运咨询</span>
+      <span class="tag">中东跨境</span>
+    </div>
+  </article>
+
+  <article class="svc">
+    <div class="svc-head">
+      <div>
+        <h3>货物信息整理服务</h3>
+        <div class="en">Cargo Information Organization</div>
+      </div>
+      <span class="badge">免费协助整理</span>
+    </div>
+    <p>协助客户规范录入品名、图片、包装尺寸、重量、件数等关键信息。</p>
+    <div class="tags">
+      <span class="tag">品名申报</span>
+      <span class="tag">尺寸重量</span>
+      <span class="tag">信息核对</span>
+    </div>
+  </article>
+
+  <!-- ================= 表单 ================= -->
+  <h2 class="sec-title">提交货物信息</h2>
+  <p class="sec-sub">填写越完整，报价与方案越准确</p>
+
+  <form id="cargoForm" novalidate>
+
+    <!-- 发货人信息 -->
+    <div class="form-card" style="margin-bottom:14px;">
+      <div class="field">
+        <label for="senderName">发货人姓名 <span class="req">*</span></label>
+        <input type="text" id="senderName" name="senderName" placeholder="请填写发货人姓名" required maxlength="30" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="senderPhone">联系电话 <span class="req">*</span></label>
+        <input type="tel" id="senderPhone" name="senderPhone" placeholder="请输入11位手机号" required maxlength="11" inputmode="numeric" pattern="1[3-9]\d{9}" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="company">公司名称</label>
+        <input type="text" id="company" name="company" placeholder="选填，如：深圳XX贸易有限公司" maxlength="50" autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="region">所在地区</label>
+        <input type="text" id="region" name="region" placeholder="选填，如：广东省深圳市宝安区" maxlength="50">
+      </div>
+      <div class="field">
+        <label for="wechat">微信号 <span class="req">*</span></label>
+        <input type="text" id="wechat" name="wechat" placeholder="必填，方便微信对接" required maxlength="40">
+      </div>
+      <div class="field">
+        <label for="email">邮箱</label>
+        <input type="email" id="email" name="email" placeholder="选填，接收报价单等文件" maxlength="50" autocomplete="email">
+      </div>
+    </div>
+
+    <!-- 货物明细 -->
+    <div id="cargoList"></div>
+
+    <button type="button" class="btn-add" id="addCargo">＋ 添加一条货物</button>
+
+    <!-- 合计 -->
+    <div class="totals">
+      <div>
+        <span class="t-label">合计件数</span>
+        <span class="t-val" id="totalQty">0</span><span class="t-unit">件</span>
+      </div>
+      <div>
+        <span class="t-label">合计体积</span>
+        <span class="t-val" id="totalVol">0</span><span class="t-unit">m³</span>
+      </div>
+      <div>
+        <span class="t-label">合计重量</span>
+        <span class="t-val" id="totalWt">0</span><span class="t-unit">kg</span>
+      </div>
+    </div>
+
+    <!-- 目的地与运输 -->
+    <div class="form-card" style="margin-top:16px;">
+      <div class="field">
+        <label for="destCountry">目的国家 <span class="req">*</span></label>
+        <select id="destCountry" name="destCountry" required>
+          <option value="">请选择目的国家</option>
+          <option value="沙特阿拉伯">沙特阿拉伯 Saudi Arabia</option>
+          <option value="阿联酋">阿联酋 UAE</option>
+          <option value="卡塔尔">卡塔尔 Qatar</option>
+          <option value="科威特">科威特 Kuwait</option>
+          <option value="阿曼">阿曼 Oman</option>
+          <option value="巴林">巴林 Bahrain</option>
+          <option value="其他中东国家">其他中东国家</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="destCity">目的城市 <span class="req">*</span></label>
+        <input type="text" id="destCity" name="destCity" placeholder="必填，如：利雅得 / 迪拜" maxlength="30" required>
+      </div>
+      <div class="field">
+        <label for="destAddress">详细地址</label>
+        <input type="text" id="destAddress" name="destAddress" placeholder="选填，如：XX区XX路XX号" maxlength="100">
+      </div>
+      <div class="field">
+        <label for="shipMethod">运输方式 <span class="req">*</span></label>
+        <select id="shipMethod" name="shipMethod" required>
+          <option value="">请选择运输方式</option>
+          <option value="空运专线">空运专线</option>
+          <option value="海运专线">海运专线</option>
+          <option value="空运到机场">空运到机场</option>
+          <option value="海运整柜">海运整柜</option>
+          <option value="海运拼箱">海运拼箱</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 提货联系人 -->
+    <div class="form-card" style="margin-top:14px;">
+      <div style="font-size:14.5px;font-weight:800;margin-bottom:12px;color:var(--brand);">提货信息（上门提货时填写）</div>
+      <div class="field">
+        <label for="contactName">提货联系人</label>
+        <input type="text" id="contactName" name="contactName" placeholder="选填，填写提货联系人" maxlength="30">
+      </div>
+      <div class="field">
+        <label for="contactPhone">提货联系电话</label>
+        <input type="tel" id="contactPhone" name="contactPhone" placeholder="选填，请输入11位手机号" maxlength="11" inputmode="numeric" pattern="1[3-9]\d{9}">
+      </div>
+      <div class="field">
+        <label for="pickupAddress">提货地址</label>
+        <input type="text" id="pickupAddress" name="pickupAddress" placeholder="省/市/区/详细街道门牌号（顺丰格式）" maxlength="100">
+      </div>
+      <div class="field">
+        <label for="remark">备注信息</label>
+        <textarea id="remark" name="remark" placeholder="选填，这一项备注需要上门提货时才填写" maxlength="300"></textarea>
+      </div>
+    </div>
+
+  </form>
+
+  <!-- ================= 联系信息 ================= -->
+  <h2 class="sec-title">商务咨询</h2>
+  <div class="contact">
+    <h3>老张沙特物流</h3>
+    <p class="biz">业务方向：中国 → 沙特 / 阿联酋 中东专线<br>双清 · 转运 · 跨境物流咨询</p>
+
+    <div class="contact-lines">
+      <div class="contact-line">
+        <span class="k">联系电话</span>
+        <span class="v"><a href="tel:18938066771">189 3806 6771</a></span>
+      </div>
+      <div class="contact-line">
+        <span class="k">微信号</span>
+        <span class="v">laozhang-saudi</span>
+      </div>
+    </div>
+
+    <div class="qr-box">
+      <!-- ⚠️ 请将此处的 src 替换为您自己真实微信二维码图片的路径或Base64代码 -->
+      <img id="qrImage" src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 132 132'%3E%3Crect width='132' height='132' fill='%23FFFFFF'/%3E%3Crect x='10' y='10' width='112' height='112' fill='none' stroke='%23D9BA79' stroke-width='2' stroke-dasharray='6 4'/%3E%3Ctext x='66' y='70' font-size='12' fill='%236B7A70' text-anchor='middle' font-family='sans-serif'%3E请替换为真实微信二维码%3C/text%3E%3C/svg%3E" alt="微信二维码">
+      <div class="qr-cap">微信扫码 · 商务咨询</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    老张沙特物流 · 中东专线<br>
+    本页面信息仅用于物流咨询与报价，我们将妥善保管您的资料
+  </div>
+
+</main>
+
+<!-- ================= 底部固定提交栏 ================= -->
+<div class="bottom-bar">
+  <div class="bottom-inner">
+    <button type="submit" form="cargoForm" class="btn-primary" id="submitBtn">立即提交货物信息</button>
+  </div>
+</div>
+
+<!-- ================= 提交结果弹层 ================= -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head">
+      <h3 id="modalTitle">货物信息已整理完成</h3>
+      <button type="button" class="modal-close" id="modalClose" aria-label="关闭">✕</button>
+    </div>
+    <p class="modal-tip">请复制以下信息，发送给老张的微信，我们会尽快与您一对一对接报价。</p>
+    <pre class="summary" id="summaryText"></pre>
+    <button type="button" class="btn-primary" id="copyBtn">复制信息</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* =========================================================
+     一、主题（昼夜双色）
+     ========================================================= */
+  var root = document.documentElement;
+  var THEME_KEY = 'lz_saudi_theme';
+  var themeBtn = document.getElementById('themeBtn');
+
+  function autoTheme() {
+    var h = new Date().getHours();          // 访客设备本地时间
+    return (h >= 6 && h < 18) ? 'light' : 'dark';
+  }
+
+  function paintTheme(t) {
+    root.setAttribute('data-theme', t);
+    themeBtn.textContent = (t === 'dark') ? '☀' : '☾';
+    var label = (t === 'dark') ? '切换到日间模式' : '切换到夜间模式';
+    themeBtn.setAttribute('aria-label', label);
+    themeBtn.setAttribute('title', label);
+  }
+
+  function getSavedTheme() {
+    try { return localStorage.getItem(THEME_KEY); } catch (e) { return null; }
+  }
+
+  paintTheme(getSavedTheme() || autoTheme());
+
+  themeBtn.addEventListener('click', function () {
+    var next = (root.getAttribute('data-theme') === 'dark') ? 'light' : 'dark';
+    paintTheme(next);
+    try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+  });
+
+  setInterval(function () {
+    if (!getSavedTheme()) paintTheme(autoTheme());
+  }, 60000);
+
+
+  /* =========================================================
+     二、货物条目（动态增删 + 自动计算）
+     ========================================================= */
+  var cargoList = document.getElementById('cargoList');
+  var addBtn    = document.getElementById('addCargo');
+  var totalQtyEl = document.getElementById('totalQty');
+  var totalVolEl = document.getElementById('totalVol');
+  var totalWtEl  = document.getElementById('totalWt');
+  var seq = 0;
+
+  function num(v) {
+    var n = parseFloat(v);
+    return (isFinite(n) && n > 0) ? n : 0;
+  }
+
+  function fmt(x, d) {
+    if (!x) return '0';
+    var s = x.toFixed(d);
+    if (s.indexOf('.') > -1) {
+      s = s.replace(/0+$/, '').replace(/\.$/, '');
+    }
+    return s;
+  }
+
+  function createItem() {
+    seq += 1;
+    var id = seq;
+    var el = document.createElement('div');
+    el.className = 'cargo';
+    el.setAttribute('data-item', '');
+
+    el.innerHTML =
+      '<div class="cargo-head">' +
+        '<span class="cargo-title">货物 <em data-no>' + id + '</em></span>' +
+        '<button type="button" class="btn-del" data-del>删除</button>' +
+      '</div>' +
+
+      '<div class="field">' +
+        '<label for="name_' + id + '">中文品名 <span class="req">*</span></label>' +
+        '<input type="text" id="name_' + id + '" name="name_' + id + '" placeholder="例如：手机壳 / 五金配件" required maxlength="50">' +
+      '</div>' +
+
+      '<div class="field">' +
+        '<label>产品图片 <span class="req">*</span></label>' +
+        '<div class="upload" data-upload>' +
+          '<input class="file-input" type="file" id="file_' + id + '" name="file_' + id + '" accept="image/*" required>' +
+          '<label class="upload-label" for="file_' + id + '"><span class="plus">＋</span><span data-upload-text>上传产品图片</span></label>' +
+          '<div class="thumbs" data-thumbs></div>' +
+        '</div>' +
+      '</div>' +
+
+      '<div class="field">' +
+        '<label for="qty_' + id + '">件数 <span class="req">*</span></label>' +
+        '<input type="number" id="qty_' + id + '" name="qty_' + id + '" placeholder="例如：10" min="1" step="1" inputmode="numeric" required>' +
+      '</div>' +
+
+      '<div class="field">' +
+        '<label>单件包装尺寸（cm）与单件重量 <span class="req">*</span></label>' +
+        '<div class="row3">' +
+          '<div class="mini"><span>长 (cm)</span><input type="number" id="len_' + id + '" name="len_' + id + '" placeholder="40" min="0" step="0.1" inputmode="decimal" required></div>' +
+          '<div class="mini"><span>宽 (cm)</span><input type="number" id="wid_' + id + '" name="wid_' + id + '" placeholder="30" min="0" step="0.1" inputmode="decimal" required></div>' +
+          '<div class="mini"><span>高 (cm)</span><input type="number" id="hgt_' + id + '" name="hgt_' + id + '" placeholder="20" min="0" step="0.1" inputmode="decimal" required></div>' +
+        '</div>' +
+        '<div class="row3" style="margin-top:8px;">' +
+          '<div class="mini"><span>单件重量 (kg)</span><input type="number" id="uwt_' + id + '" name="uwt_' + id + '" placeholder="0.5" min="0" step="0.01" inputmode="decimal" required></div>' +
+        '</div>' +
+      '</div>' +
+
+      '<div class="field" style="margin-top:16px;">' +
+        '<label>报关方式 <span class="req">*</span></label>' +
+        '<select name="customs_' + id + '" required>' +
+          '<option value="">请选择报关方式</option>' +
+          '<option value="自有单证">自有单证</option>' +
+          '<option value="买单报关">买单报关</option>' +
+        '</select>' +
+      '</div>' +
+
+      '<div class="row2">' +
+        '<div class="field">' +
+          '<label>品牌 <span class="req">*</span></label>' +
+          '<select name="brand_' + id + '" required>' +
+            '<option value="">请选择</option>' +
+            '<option value="有牌">有牌</option>' +
+            '<option value="无牌">无牌</option>' +
+          '</select>' +
+        '</div>' +
+        '<div class="field">' +
+          '<label>是否带电池 <span class="req">*</span></label>' +
+          '<select name="battery_' + id + '" required>' +
+            '<option value="">请选择</option>' +
+            '<option value="带电">带电</option>' +
+            '<option value="不带电">不带电</option>' +
+          '</select>' +
+        '</div>' +
+      '</div>' +
+
+      '<div class="field">' +
+        '<label>其他敏感成份 <span class="req">*</span></label>' +
+        '<select name="sensitive_' + id + '" required>' +
+          '<option value="">请选择敏感成份</option>' +
+          '<option value="带液体">带液体</option>' +
+          '<option value="带粉末">带粉末</option>' +
+          '<option value="带颗粒">带颗粒</option>' +
+          '<option value="其他">其他</option>' +
+        '</select>' +
+      '</div>' +
+
+      '<div class="field" data-other-desc style="display:none;">' +
+        '<label>请详细说明其他敏感成份 <span class="req">*</span></label>' +
+        '<input type="text" name="sensitive_desc_' + id + '" placeholder="请填写具体的敏感成份说明" maxlength="50">' +
+      '</div>' +
+
+      '<div class="calc">' +
+        '<div>单项体积 <b data-v>0</b> m³</div>' +
+        '<div>单项重量 <b data-w>0</b> kg</div>' +
+      '</div>';
+
+    return el;
+  }
+
+  function renumber() {
+    var items = cargoList.querySelectorAll('[data-item]');
+    Array.prototype.forEach.call(items, function (item, i) {
+      var no = item.querySelector('[data-no]');
+      if (no) no.textContent = (i + 1);
+      var del = item.querySelector('[data-del]');
+      if (del) del.style.display = (items.length <= 1) ? 'none' : '';
+    });
+  }
+
+  function recalc() {
+    var tq = 0, tv = 0, tw = 0;
+    var items = cargoList.querySelectorAll('[data-item]');
+
+    Array.prototype.forEach.call(items, function (item) {
+      var qty = num(item.querySelector('input[name^="qty_"]').value);
+      var l   = num(item.querySelector('input[name^="len_"]').value);
+      var w   = num(item.querySelector('input[name^="wid_"]').value);
+      var h   = num(item.querySelector('input[name^="hgt_"]').value);
+      var uw  = num(item.querySelector('input[name^="uwt_"]').value);
+
+      var singleVol = (l * w * h) / 1000000;   // 单件体积 m³
+      var itemVol   = singleVol * qty;          // 单项体积
+      var itemWt    = uw * qty;                 // 单项重量
+
+      item.querySelector('[data-v]').textContent = fmt(itemVol, 3);
+      item.querySelector('[data-w]').textContent = fmt(itemWt, 2);
+
+      tq += qty;
+      tv += itemVol;
+      tw += itemWt;
+    });
+
+    totalQtyEl.textContent = fmt(tq, 0);
+    totalVolEl.textContent = fmt(tv, 3);
+    totalWtEl.textContent  = fmt(tw, 2);
+  }
+
+  // 添加第一条
+  cargoList.appendChild(createItem());
+  renumber();
+  recalc();
+
+  // 添加货物
+  addBtn.addEventListener('click', function () {
+    var el = createItem();
+    cargoList.appendChild(el);
+    renumber();
+    recalc();
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // 删除货物
+  cargoList.addEventListener('click', function (e) {
+    var del = e.target.closest('[data-del]');
+    if (!del) return;
+    var items = cargoList.querySelectorAll('[data-item]');
+    if (items.length <= 1) return;
+    del.closest('[data-item]').remove();
+    renumber();
+    recalc();
+  });
+
+  // 数值输入 → 实时计算
+  cargoList.addEventListener('input', function (e) {
+    if (e.target.matches('input[type="number"]')) recalc();
+  });
+
+  // 监听“其他敏感成份”的变更
+  cargoList.addEventListener('change', function (e) {
+    if (e.target.matches('select[name^="sensitive_"]')) {
+      var item = e.target.closest('[data-item]');
+      var descField = item.querySelector('[data-other-desc]');
+      var descInput = descField.querySelector('input');
+      if (e.target.value === '其他') {
+        descField.style.display = 'block';
+        descInput.required = true;
+      } else {
+        descField.style.display = 'none';
+        descInput.required = false;
+        descInput.value = ''; // 清空
+      }
+    }
+  });
+
+  // 图片预览
+  cargoList.addEventListener('change', function (e) {
+    var input = e.target;
+    if (!input.classList.contains('file-input')) return;
+
+    var item    = input.closest('[data-item]');
+    var thumbs  = item.querySelector('[data-thumbs]');
+    var upload  = item.querySelector('[data-upload]');
+    var txtEl   = item.querySelector('[data-upload-text]');
+    var f       = input.files && input.files[0];
+
+    thumbs.innerHTML = '';
+    if (!f) {
+      upload.classList.remove('has-file');
+      if (txtEl) txtEl.textContent = '上传产品图片';
+      return;
+    }
+
+    var url = URL.createObjectURL(f);
+    var img = document.createElement('img');
+    img.src = url;
+    img.alt = '产品图片预览';
+    img.onload = function () { URL.revokeObjectURL(url); };
+    thumbs.appendChild(img);
+
+    upload.classList.add('has-file');
+    if (txtEl) txtEl.textContent = '重新上传';
+  });
+
+
+  /* =========================================================
+     三、手机号格式校验提示
+     ========================================================= */
+  Array.prototype.forEach.call(
+    document.querySelectorAll('input[type="tel"]'),
+    function (inp) {
+      inp.addEventListener('invalid', function () {
+        if (!inp.value) {
+          inp.setCustomValidity('请填写手机号码');
+        } else {
+          inp.setCustomValidity('请输入11位有效手机号');
+        }
+      });
+      inp.addEventListener('input', function () {
+        inp.setCustomValidity('');
+      });
+    }
+  );
+
+
+  /* =========================================================
+     四、提交（生成信息摘要）
+     ========================================================= */
+  var form = document.getElementById('cargoForm');
+  var modal = document.getElementById('modal');
+  var summaryEl = document.getElementById('summaryText');
+  var copyBtn = document.getElementById('copyBtn');
+  var modalClose = document.getElementById('modalClose');
+  var summaryText = '';
+
+  function val(id) {
+    var el = document.getElementById(id);
+    return el ? String(el.value || '').trim() : '';
+  }
+
+  function buildSummary() {
+    var lines = [];
+    lines.push('【老张沙特物流 · 货物信息】');
+    lines.push('————————————');
+    lines.push('发货人：' + val('senderName'));
+    lines.push('联系电话：' + val('senderPhone'));
+    if (val('company')) lines.push('公司名称：' + val('company'));
+    if (val('region'))  lines.push('所在地区：' + val('region'));
+    lines.push('微信号：' + val('wechat'));
+    if (val('email'))   lines.push('邮箱：' + val('email'));
+    
+    lines.push('————————————');
+    lines.push('目的国家：' + val('destCountry'));
+    lines.push('目的城市：' + val('destCity'));
+    if (val('destAddress')) lines.push('详细地址：' + val('destAddress'));
+    lines.push('运输方式：' + val('shipMethod'));
+
+    lines.push('————————————');
+    lines.push('货物明细：');
+
+    var items = cargoList.querySelectorAll('[data-item]');
+    Array.prototype.forEach.call(items, function (item, i) {
+      var name = item.querySelector('input[name^="name_"]').value.trim();
+      var qty  = num(item.querySelector('input[name^="qty_"]').value);
+      var l    = num(item.querySelector('input[name^="len_"]').value);
+      var w    = num(item.querySelector('input[name^="wid_"]').value);
+      var h    = num(item.querySelector('input[name^="hgt_"]').value);
+      var uw   = num(item.querySelector('input[name^="uwt_"]').value);
+      
+      var customs = item.querySelector('select[name^="customs_"]').value;
+      var brand = item.querySelector('select[name^="brand_"]').value;
+      var battery = item.querySelector('select[name^="battery_"]').value;
+      var sensitive = item.querySelector('select[name^="sensitive_"]').value;
+      
+      if (sensitive === '其他') {
+        var desc = item.querySelector('input[name^="sensitive_desc_"]').value.trim();
+        sensitive += '（' + desc + '）';
+      }
+
+      var itemVol = (l * w * h) / 1000000 * qty;
+      var itemWt  = uw * qty;
+
+      lines.push((i + 1) + '. ' + name);
+      lines.push('   件数 ' + fmt(qty, 0) + ' 件 ｜ 单件尺寸 ' + l + '×' + w + '×' + h + ' cm ｜ 单件重量 ' + uw + ' kg');
+      lines.push('   单项体积 ' + fmt(itemVol, 3) + ' m³ ｜ 单项重量 ' + fmt(itemWt, 2) + ' kg');
+      lines.push('   报关：' + customs + ' ｜ 品牌：' + brand + ' ｜ 电池：' + battery + ' ｜ 敏感：' + sensitive);
+    });
+
+    lines.push('————————————');
+    lines.push('合计件数：' + totalQtyEl.textContent + ' 件');
+    lines.push('合计体积：' + totalVolEl.textContent + ' m³');
+    lines.push('合计重量：' + totalWtEl.textContent + ' kg');
+
+    if (val('contactName') || val('pickupAddress')) {
+      lines.push('————————————');
+      lines.push('【提货信息】');
+      if (val('contactName')) lines.push('提货联系人：' + val('contactName'));
+      if (val('contactPhone')) lines.push('提货电话：' + val('contactPhone'));
+      if (val('pickupAddress')) lines.push('提货地址：' + val('pickupAddress'));
+    }
+    
+    if (val('remark')) {
+      lines.push('备注：' + val('remark'));
+    }
+
+    return lines.join('\n');
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    recalc();
+    summaryText = buildSummary();
+    summaryEl.textContent = summaryText;
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  });
+
+  function closeModal() {
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    copyBtn.textContent = '复制信息';
+  }
+
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) closeModal();
+  });
+
+  copyBtn.addEventListener('click', function () {
+    function done() {
+      copyBtn.textContent = '已复制 ✓';
+      setTimeout(function () { copyBtn.textContent = '复制信息'; }, 1800);
+    }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = summaryText;
+      ta.style.position = 'fixed';
+      ta.style.top = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); done(); }
+      catch (err) { copyBtn.textContent = '请长按上方文字手动复制'; }
+      document.body.removeChild(ta);
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(summaryText).then(done).catch(fallback);
+    } else {
+      fallback();
+    }
+  });
+
+})();
+</script>
+</body>
+</html>
